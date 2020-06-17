@@ -1,13 +1,7 @@
 import axios from 'axios'
 import qs from 'qs'
-import { store } from "@/store1";
-
 // 添加请求拦截器
 axios.interceptors.request.use(config => {
-  const { token } = store.getState().form
-  if(token){
-    config.data += `&token=${token}`
-  }
   return config
 
 }, error => {
@@ -18,19 +12,8 @@ axios.interceptors.request.use(config => {
 // 添加响应拦截器
 axios.interceptors.response.use(response => {
   // 根据状态码跳转
-  if (response.status === 200) {
-    // window.location.href = 'https://www.baidu.com'
-  }
   return response;
 }, error => {
-  // switch (error.response.status) {
-  //   case 404:
-  //     window.location.href = 'https://www.baidu.com'
-  //     break;
-    
-  //   default:
-  //     break;
-  // }
   return Promise.reject(error);
 });
 
@@ -53,13 +36,13 @@ export function post (url, data) {
 // get
 export function get (url, data = '') {
   return new Promise((resolve, reject) => {
-    axios.get(url, {params: data})
-      // url,
-      // method: 'GET',
-      // // 添加公共的请求头
-      // // headers: { token: '' },
-      // params: '',
-    // })
+    axios({
+      url,
+      method: 'GET',
+      // 添加公共的请求头
+      // headers: { token: '' },
+      params: '',
+    })
       .then(res => resolve(res.data))
       .catch(err => console.log(err))
   })
