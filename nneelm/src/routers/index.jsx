@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import { Login, Home } from './assembly'
+import { Login, Home, Basic } from './assembly'
 
 export default class Routers extends Component {
   render() {
@@ -8,8 +8,7 @@ export default class Routers extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/login" component={Login}/>
-          <Route path="/home" component={Home}/>
-          <Redirect to="/home"/>
+          <Route path="/" component={Basic}/>
         </Switch>
       </BrowserRouter>
     )
