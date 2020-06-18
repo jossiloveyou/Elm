@@ -9,7 +9,7 @@ export default class Routers extends Component {
         <Switch>
           <Route path="/login" component={Login}/>
           <Route path="/home" component={Home}/>
-          <Redirect to="/login"/>
+          <Redirect to="/home"/>
         </Switch>
       </BrowserRouter>
     )
