@@ -7,6 +7,7 @@ import store from '@/store'
 import Routers from '@/routers'
 import '@/assets/reset.css'
 import '@/assets/rem'
+import '@/assets/index.css'
 
 ReactDOM.render(
   <Provider store={store}>
