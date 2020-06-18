@@ -10,28 +10,6 @@ function Header (props) {
     }
   }
 
-  const head = () => {
-    return (
-      <div className="head-box">
-        <div>
-          <span onClick={() => back(lef)}>
-            {title[0]}
-          </span>
-        </div>
-        <div>
-          <span onClick={() => back(cen)}>
-            {title[1]}
-          </span>
-        </div>
-        <div>
-          <span onClick={() => back(rig)}>
-            {title[2]}
-          </span>
-        </div> 
-      </div> 
-    )
-  }
-
   return (
     <div className="head-box">
        <div>
