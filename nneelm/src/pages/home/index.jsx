@@ -14,14 +14,13 @@ function Home (props) {
   },[])
   return (
     <div className="home-box">
-      {/* <Header/> */}
-      <div className="home-head">
-        <span>icon</span>
-        <p>宏伊国际广场</p>
-        <span>登陆|注册</span>
+      <Header 
+        title={['icon', '中华广场', '登录|注册']}
+      />
+      <div className="home-sec">
+        <Home_nav data={datas}/>
+        <Home_center data={shop}/>
       </div>
-      <Home_nav data={datas}/>
-      <Home_center data={shop}/>
     </div>
   )
 }

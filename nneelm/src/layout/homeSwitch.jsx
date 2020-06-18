@@ -15,30 +15,30 @@ export default class HomeSwitch extends Component {
           <Redirect to="/home"/>
         </Switch>
         <ul className="hs-foot">
-          <li>
-            <NavLink to="/home">
-              <p></p>
-              <p>外卖</p>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/search">
-              <p></p>
-              <p>搜索</p>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/orderform">
-              <p></p>
-              <p>订单</p>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/my">
-              <p></p>
-              <p>我的</p>
-            </NavLink>
-          </li>
+          <NavLink to="/home">
+            <li>
+                <p></p>
+                <p>外卖</p>
+            </li>
+          </NavLink>
+          <NavLink to="/search">
+            <li>
+                <p></p>
+                <p>搜索</p>
+            </li>
+          </NavLink>
+          <NavLink to="/orderform">
+            <li>
+                <p></p>
+                <p>订单</p>
+            </li>
+          </NavLink>
+          <NavLink to="/my">
+            <li>
+                <p></p>
+                <p>我的</p>
+            </li>
+          </NavLink>
         </ul> 
       </div>
     )
