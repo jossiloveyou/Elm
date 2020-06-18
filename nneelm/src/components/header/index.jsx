@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-
+import './style.less'
 
 function Header (props) {
   const { lef = false, cen = false, rig = false, title, history } = props
