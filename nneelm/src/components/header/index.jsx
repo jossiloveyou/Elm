@@ -15,7 +15,7 @@ function Header (props) {
 
   return (
     <div className="head-box">
-      {/* <div>
+      <div>
         <span onClick={back(lef)}></span>
       </div>
       <div>
@@ -23,7 +23,7 @@ function Header (props) {
       </div>
       <div>
         <span onClick={back(rig)}></span>
-      </div> */}
+      </div>
     </div>
   )
 }
