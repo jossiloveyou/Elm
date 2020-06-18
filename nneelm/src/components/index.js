@@ -1,5 +1,5 @@
 import Loadable from './Loadable'
-import Header from './Header'
+import Header from './Headers'
 import Icons from './Icons'
 
 export {

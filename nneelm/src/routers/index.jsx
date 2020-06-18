@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import { Login, Home, Basic } from './assembly'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Login, Basic } from './assembly'
 
 export default class Routers extends Component {
   render() {
