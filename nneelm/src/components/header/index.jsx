@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom'
 
 function Header (props) {
-  const { lef = false, cen = false, rig = false, history } = props
+  const { lef = false, cen = false, rig = false, title, history } = props
   const back = (route) => {
     history.push(route)
   }
@@ -15,15 +15,21 @@ function Header (props) {
 
   return (
     <div className="head-box">
-      {/* <div>
-        <span onClick={back(lef)}></span>
+       <div>
+        <span onClick={back(lef)}>
+          {title}
+        </span>
       </div>
       <div>
-      <span onClick={back(cen)}></span>
+      <span onClick={back(cen)}>
+        {title}
+      </span>
       </div>
       <div>
-        <span onClick={back(rig)}></span>
-      </div> */}
+        <span onClick={back(rig)}>
+          {title}
+        </span>
+      </div> 
     </div>
   )
 }
