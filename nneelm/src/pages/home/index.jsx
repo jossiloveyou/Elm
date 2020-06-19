@@ -30,7 +30,9 @@ function Home (props) {
   return (
     <div className="home-box">
       <Header 
-        title={['icon', '宏伊国际广场', '登录|注册']}
+        title={['','宏伊国际广场', '登录|注册']}
+        icons={['sousuo']}
+        
       />
       <div className="home-sec">
         <Home_nav data={datas}/>

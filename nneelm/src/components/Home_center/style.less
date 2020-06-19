@@ -1,4 +1,158 @@
 .home-center{
   flex: 1;
   overflow: auto;
+  .home_merchant{
+    border-top:15px solid#F5F5F5;
+    padding: 0.2rem;
+    box-sizing: border-box;
+    display: flex;
+    color: #B2B2B2;
+    span{
+      display: block;
+      padding-right: 0.1rem;
+      box-sizing: border-box;
+    }
+  }
+  .home_write{
+    width: 100%;
+    .home_write_box{
+      width: 100%;
+      padding: 0.2rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      .home_left{
+        width: 1rem;
+        img{
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+      .home_right{
+        flex: 1;
+        padding-left: 0.2rem;
+        box-sizing: border-box;
+        >div:nth-child(1){
+          padding-bottom: 0.05rem;
+          box-sizing: border-box;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          p{
+            flex: 1;
+            display: flex;
+            span:nth-child(1){
+              padding: 0 0.01rem;
+              box-sizing: border-box;
+              font-size: 0.2rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              i{
+                width: 0.5rem;
+                display: inline;
+                background: #FFD930;
+                text-align: center;
+                color: black;
+                font-weight: bold;
+              }
+            }
+            span:nth-child(2){
+              padding-left:0.1rem;
+              box-sizing: border-box;
+              font-weight: bold;
+              font-size: 0.26rem;
+            }
+          }
+          i{
+            display: block;
+            width: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.2rem;
+            color: #999999;
+          }
+        }
+        >div:nth-child(2){
+          padding-bottom: 0.05rem;
+          box-sizing: border-box;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .start{
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+              ul{
+                display: flex;
+                li{
+                  display: flex;
+                  justify-content:center;
+                  align-items: center;
+                  font-size: 0.15rem;
+                }
+              }
+              i:nth-child(1){
+                color: #ff6000;
+                font-size: 0.15rem;
+                text-align: center;
+              }
+              i{
+                font-size: 0.15rem;
+              }
+          }
+          p{
+            width: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span:nth-child(1){
+              color: white;
+              background: #3190e8;
+              border-radius: 0.05rem;
+              font-size: 0.15rem;
+              padding:0 0.02rem;
+              box-sizing: border-box;
+            }
+            span:nth-child(2){
+              border:1px solid #3190e8;
+              border-radius: 0.05rem;
+              font-size: 0.15rem;
+              padding:0 0.02rem;
+              box-sizing: border-box;
+            }
+          }
+        }
+        >div:nth-child(3){
+          padding: 0 0.1rem;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.15rem;
+          p:nth-child(1){
+            flex: 1;
+            color: #666666;
+          }
+          p:nth-child(2){
+            display: flex;
+            span:nth-child(1){
+              display: block;
+              color: #999999;
+            }
+            span:nth-child(2){
+              display: block;
+              color: #3190e8;
+            }
+          }
+        }
+      }
+    }
+  }
+  
 }
