@@ -1,11 +1,11 @@
-.home-box{
+.home-box {
   width: 100%;
   display: flex;
   flex-direction: column;
   font-size: 0.24rem;
   overflow: auto;
-  .home-sec{
-    flex: 1;
-    overflow: auto;
-  }
+}
+.home-box .home-sec {
+  flex: 1;
+  overflow: auto;
 }

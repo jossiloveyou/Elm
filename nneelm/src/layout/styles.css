@@ -1,0 +1,36 @@
+.hs-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+.hs-foot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hs-foot a {
+  flex: 1;
+  font-size: 0.3rem;
+  padding: 0.2rem;
+  box-sizing: border-box;
+}
+.hs-foot a li {
+  width: 100%;
+  height: 100%;
+}
+.hs-foot a li p:nth-child(1) {
+  font-size: 0.4rem;
+}
+.hs-foot a li p:nth-child(2) {
+  font-size: 0.24rem;
+}
+.hs-foot a li p {
+  text-align: center;
+}
+.hs-foot a .active {
+  color: red;
+}
