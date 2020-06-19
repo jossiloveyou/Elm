@@ -4,28 +4,26 @@ import { Icons } from '@@'
 import './style.less'
 
 function Header (props) {
-  const { lef = false, cen = false, rig = false, title, history } = props
+  const { lef = false, cen = false, rig = false, title = [], icons = [], history } = props
   const back = (route) => {
-    if (route) {
-      history.push(route)
-    }
+    if (route) history.push(route)
   }
 
   return (
     <div className="head-box">
        <div>
         <span onClick={() => back(lef)}>
-          {title[0]}
+          {icons[0] ? <Icons icons={icons[0]}/> : title[0]}
         </span>
       </div>
       <div>
-      <span onClick={() => back(cen)}>
-        {title[1]}
-      </span>
+        <span onClick={() => back(cen)}>
+          {icons[1] ? <Icons icons={icons[1]}/> : title[1]}
+        </span>
       </div>
       <div>
         <span onClick={() => back(rig)}>
-          {title[2]}
+          {icons[2] ? <Icons icons={icons[2]}/> : title[2]}
         </span>
       </div> 
     </div>
