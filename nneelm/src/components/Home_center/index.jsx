@@ -1,13 +1,12 @@
 import React from 'react'
-import './style.less'
+import { Rate } from 'antd'
 import {Icons} from '@@'
-import { Rate } from 'antd';
+import './style.less'
 
 
 
 export default function Home_center ({ data }) {
   const shop = data
-  console.log(shop)
   return (
     <div className="home-center">
         <div className="home_merchant">

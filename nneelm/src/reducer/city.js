@@ -9,7 +9,6 @@ export default handleActions ({
   [CITY_FETCH_HOT]: (state, action) => ({...state, hotCity: action.payload}),
   [CITY_FETCH_ALL]: (state, action) => {
     let arr = Object.entries(action.payload).sort(function(a,b){return a[0].localeCompare(b[0])})
-    console.log(arr);
     return {...state, allCity: arr}
   },
 }, defaultState)
