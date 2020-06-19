@@ -175,5 +175,7 @@ ul {
 	word-spacing: -4px;
 }
 #root{
+	width: 100%;
+	height: 100%;
 	font-size: 0.24rem;
 }
