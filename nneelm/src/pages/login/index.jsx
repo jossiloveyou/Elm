@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Carousel } from '@@'
+import { Header } from '@@'
 import './styles.less'
 
 function Login () {

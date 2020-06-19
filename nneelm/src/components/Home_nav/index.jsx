@@ -1,9 +1,9 @@
+/* eslint-disable array-callback-return */
 import React from 'react'
 import './style.less'
 
 export default function Home_nav ({ data }) {
   const datas = data
-  console.log(datas)
   return (
     <div className="home-nav">
         {
