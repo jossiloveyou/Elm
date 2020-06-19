@@ -2,7 +2,7 @@
   要给icons一个参数
   例如:
     如果我要传入饿了么图标
-    <Icons icons={changyonglogo40}/>
+    <Icons icons="changyonglogo40"/>
 
 ​		
 
