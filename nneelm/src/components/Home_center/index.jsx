@@ -1,8 +1,7 @@
 import React from 'react'
 import './style.less'
-export default function Home_center (props) {
-  const datas=props.data
-  console.log(datas)
+
+export default function Home_center ({ datas }) {
   return (
     <div className="home-center">
         

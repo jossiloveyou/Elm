@@ -1,17 +1,32 @@
-import React, { useEffect} from 'react'
-import { Header, Home_nav, Home_center } from '@@'
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/jsx-pascal-case */
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { Header, Home_nav, Home_center } from '@@'
+import { HOME_FETCH_NAV, HOME_FETCH_SHOP } from '@/constants/actionTypes'
+import homeAction from '@/actions/home'
+import str from '@/utils/string'
 import './styles.less'
-import { getNav,getShop } from '@/actions/home'
+
+export default connect(
+({home})=> {
+    return{
+      datas:home.datas,
+      shop:home.shop
+    }
+  },{
+    getNav: homeAction[str(HOME_FETCH_NAV)],
+    getShop: homeAction[str(HOME_FETCH_SHOP)],
+  }
+)(Home)
 
 function Home (props) {
   const { datas, getNav, shop, getShop } = props
   useEffect( () => {
     getNav()
-  },[])
-  useEffect( () => {
     getShop()
   },[])
+  
   return (
     <div className="home-box">
       <Header 
@@ -25,14 +40,3 @@ function Home (props) {
   )
 }
 
-export default connect(
-  ({home})=> {
-     return{
-       datas:home.datas,
-       shop:home.shop
-     }
-   },{
-     getNav,
-     getShop
-   }
- )(Home)

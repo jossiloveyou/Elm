@@ -1,15 +1,9 @@
+import { createActions } from 'redux-actions'
+import { HOME_FETCH_NAV, HOME_FETCH_SHOP } from '@/constants/actionTypes'
 import { get } from '@/utils/request'
 import api from '@/services/api'
 
-export function getNav (options) {
-  return{
-    type: 'HOME_HOOK_NAV',
-    payload: get(api.nav),
-  } 
-}
-export function getShop (options) {
-  return{
-    type: 'HOME_HOOK_SHOP',
-    payload: get(api.shop),
-  }
-}
+export default createActions({
+  [HOME_FETCH_NAV]: () => get(api.nav),
+  [HOME_FETCH_SHOP]: () => get(api.shop),
+})
