@@ -17,15 +17,8 @@ export default function Carousel () {
   return (
     <div className="swiper-container">
     <div className="swiper-wrapper">
-      <div className="swiper-slide"><img src="1.jpg" alt=""/></div>
-      <div className="swiper-slide"><img src="2.jpg" alt=""/></div>
-      <div className="swiper-slide"><img src="1.jpg" alt=""/></div>
-      <div className="swiper-slide"><img src="2.jpg" alt=""/></div>
-      <div className="swiper-slide"><img src="1.jpg" alt=""/></div>
-      <div className="swiper-slide"><img src="2.jpg" alt=""/></div>
-      <div className="swiper-slide"><img src="1.jpg" alt=""/></div>
-      <div className="swiper-slide"><img src="2.jpg" alt=""/></div>
-      <div className="swiper-slide"><img src="1.jpg" alt=""/></div>
+      <div className="swiper-slide"><img src="" alt=""/></div>
+      <div className="swiper-slide"><img src="" alt=""/></div>
     </div>
     <div className="swiper-pagination"></div>
   </div>
