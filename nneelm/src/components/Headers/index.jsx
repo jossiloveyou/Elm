@@ -4,11 +4,12 @@ import { Icons } from '@@'
 import './style.less'
 
 function Header (props) {
-  const { lef = false, cen = false, rig = false, title = [], icons = [], history } = props
+  const { lef = true, cen = false, rig = false, title = [], icons = [], history } = props
   const back = (route) => {
     if (route) history.push(route)
+    
   }
-
+  
   return (
     <div className="head-box">
        <div>

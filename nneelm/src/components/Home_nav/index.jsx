@@ -3,7 +3,6 @@ import './style.less'
 
 export default function Home_nav ({ data }) {
   const datas = data
-  console.log(datas)
   return (
     <div className="home-nav">
         {

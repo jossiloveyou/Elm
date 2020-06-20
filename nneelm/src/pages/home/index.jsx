@@ -30,6 +30,8 @@ function Home (props) {
   return (
     <div className="home-box">
       <Header 
+        lef="/search"
+        rig="/login"
         title={['','宏伊国际广场', '登录|注册']}
         icons={['sousuo']}
         
