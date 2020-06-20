@@ -66,7 +66,7 @@ function City (props) {
                 {
                   v[1].map(j => {
                     return (
-                      <NavLink to="/" key={j.id}>
+                      <NavLink to={`/city/${j.id}`} key={j.id}>
                         {j.name}
                       </NavLink>
                     )
