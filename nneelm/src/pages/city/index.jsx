@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import { Header, Icons } from '@@'
 import { CITY_FETCH_HOT, CITY_FETCH_ALL } from '@/constants/actionTypes'
 import cityAction from '@/actions/city'
@@ -48,7 +48,7 @@ function City (props) {
             {
               hotCity.map(v => {
                 return (
-                  <NavLink activeClassName="hot-city" to="/" key={v.id}>
+                  <NavLink className="hot-city" to={`/city/${v.id}`} key={v.id}>
                     {v.name}
                   </NavLink>
                 )
