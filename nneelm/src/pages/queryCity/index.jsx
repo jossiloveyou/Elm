@@ -18,7 +18,7 @@ function QueryCity (props) {
   const { id } = match.params
   useEffect(() => {
     onlyCity(id)
-  })
+  },[id])
   
   return (
     <div className="query-box">
