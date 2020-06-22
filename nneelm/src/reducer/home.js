@@ -10,3 +10,4 @@ export default handleActions ({
   [HOME_FETCH_SHOP]: (state, action) => ({...state, shop: action.payload}),
 }, defaultState)
 
+

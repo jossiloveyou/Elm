@@ -1,9 +1,8 @@
 import { createActions } from 'redux-actions'
-import { CITY_FETCH_QUERY } from '@/constants/actionTypes'
+import { SHOP_FETCH_FOOD } from '@/constants/actionTypes'
 import { get } from '@/utils/request'
 import api from '@/services/api'
 
 export default createActions({
-  [CITY_FETCH_QUERY]: () => get(api.menu),
+  [SHOP_FETCH_FOOD]: options => get(api.menu + options),
 })
-

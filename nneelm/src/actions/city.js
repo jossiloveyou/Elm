@@ -7,3 +7,4 @@ export default createActions({
   [CITY_FETCH_HOT]: () => get(api.hotCity),
   [CITY_FETCH_ALL]: () => get(api.allCity),
 })
+

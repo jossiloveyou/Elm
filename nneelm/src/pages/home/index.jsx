@@ -10,6 +10,7 @@ import './styles.less'
 
 export default connect(
 ({home})=> {
+  console.log(home)
     return{
       datas:home.datas,
       shop:home.shop
