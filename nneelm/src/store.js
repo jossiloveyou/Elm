@@ -4,7 +4,7 @@ import thunk from 'redux-thunk'
 import { persistReducer } from 'redux-persist' 
 import storage from 'redux-persist/lib/storage' 
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2'
-import { login, home, city, shop } from '@/reducer'
+import { login, home, city, queryCity, shop } from '@/reducer'
 
 const rootPersistConfig = {
   key: 'auto',
@@ -20,6 +20,7 @@ const myPersistReducer = persistReducer(
     home,
     city,
     shop,
+    queryCity,
   })
 )
 const store = createStore(
