@@ -4,6 +4,6 @@ import { get } from '@/utils/request'
 import api from '@/services/api'
 
 export default createActions({
-  [CITY_FETCH_QUERY]: () => get(api.menu),
+  [CITY_FETCH_QUERY]: options => get(api.onlyCity + options),
 })
 
