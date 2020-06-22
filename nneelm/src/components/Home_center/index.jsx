@@ -4,7 +4,6 @@ import {Icons} from '@@'
 import { Rate } from 'antd';
 import { Link } from 'react-router-dom'
 
-
 export default function Home_center ({ data }) {
   const shop = data
   return (

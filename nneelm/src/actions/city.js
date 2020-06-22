@@ -8,3 +8,4 @@ export default createActions({
   [CITY_FETCH_ALL]: () => get(api.allCity),
   [CITY_FETCH_QUERY]: options => get(api.onlyCity + options),
 })
+
