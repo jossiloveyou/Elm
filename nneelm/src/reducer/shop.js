@@ -6,7 +6,6 @@ const defaultState = {
 
 export default handleActions ({
   [SHOP_FETCH_FOOD]: (state, action) =>{
-    console.log(action.payload)
     return {...state, data: action.payload}
   },
 }, defaultState)

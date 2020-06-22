@@ -8,18 +8,13 @@ import homeAction from '@/actions/home'
 import str from '@/utils/string'
 import './styles.less'
 
-export default connect(
-({home})=> {
-  console.log(home)
-    return{
-      datas:home.datas,
-      shop:home.shop
-    }
-  },{
-    getNav: homeAction[str(HOME_FETCH_NAV)],
-    getShop: homeAction[str(HOME_FETCH_SHOP)],
-  }
-)(Home)
+export default connect(({ home }) => ({
+  datas: home.datas,
+  shop: home.shop
+}),{
+  getNav: homeAction[str(HOME_FETCH_NAV)],
+  getShop: homeAction[str(HOME_FETCH_SHOP)],
+})(Home)
 
 function Home (props) {
   const { datas, getNav, shop, getShop } = props
