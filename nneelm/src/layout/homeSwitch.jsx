@@ -15,7 +15,7 @@ export default function HomeSwitch () {
         <Redirect to="/dist/home"/>
       </Switch>
       <ul className="hs-foot">
-        <NavLink to="/dist/home">
+        <NavLink activeClassName="hs-act" to="/dist/home">
           <li>
               <p><Icons icons="changyonglogo40"/></p>
               <p>外卖</p>

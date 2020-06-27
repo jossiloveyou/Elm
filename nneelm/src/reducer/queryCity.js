@@ -17,5 +17,5 @@ export default handleActions ({
     if (!is) state.historyData.push(action.payload)
     return { ...state, historyData: state.historyData }
   },
-  [CITY_FETCH_DEL_HIS]: (state, action) => ({ ...state, historyData: [] }),
+  [CITY_FETCH_DEL_HIS]: (state) => ({ ...state, historyData: [] }),
 }, defaultState)
