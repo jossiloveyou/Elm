@@ -57,6 +57,24 @@
       }
     }
   }
+  .query-his{
+    display: block;
+    background: white;
+    padding: 0.2rem 0.3rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e4e4e4;
+    >p:nth-child(1){
+      color: black;
+      font-size: 0.26rem;
+    }
+    >p:nth-child(2){
+      font-size: 0.2rem;
+      overflow: hidden;//溢出隐藏
+      word-break: keep-all;//
+      white-space: nowrap; //文本不折行
+      text-overflow: ellipsis;//显示省略符号来代表被修剪的文本。
+    }
+  }
   .hist{
     >p:first-child{
       padding-left: 0.3rem;

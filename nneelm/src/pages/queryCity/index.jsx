@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useRef } from 'react'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import cs from 'classnames'
-import { CITY_FETCH_QUERY, CITY_FETCH_SEARCH } from '@/constants/actionTypes'
+import { CITY_FETCH_QUERY, CITY_FETCH_SEARCH, CITY_FETCH_HISTORY, CITY_FETCH_DEL_HIS } from '@/constants/actionTypes'
 import queryCityAction from '@/actions/queryCity'
 import str from '@/utils/string'
 import { Header } from '@@'
@@ -15,12 +16,14 @@ export default connect(({ queryCity }) => ({
 }), {
   onlyCity: queryCityAction[str(CITY_FETCH_QUERY)],
   searchData: queryCityAction[str(CITY_FETCH_SEARCH)],
+  historyFn: queryCityAction[str(CITY_FETCH_HISTORY)],
+  emptyFn: queryCityAction[str(CITY_FETCH_DEL_HIS)],
 })(QueryCity)
 
 function QueryCity (props) {
   const [sea, setSea] = useState(true)
   const [his, setHis] = useState(false)
-  const { data, onlyCity, history, match, queryData, searchData, historyData } = props
+  const { data, onlyCity, history, match, queryData, searchData, historyData, historyFn, emptyFn } = props
   const { id } = match.params
   const queryVal = useRef()
   const clk = () => {
@@ -29,8 +32,14 @@ function QueryCity (props) {
     setHis(true)
   }
   const jump = (metadata) => {
-    history.push('/dist/home')
+    historyFn(metadata)
+    history.push(`/dist/home?geohash=${metadata.geohash}`)
   } 
+
+  const empty = () => {
+    emptyFn()
+  }
+
   useEffect(() => {
     onlyCity(id)
   },[id])
@@ -63,8 +72,24 @@ function QueryCity (props) {
 
         <div className={cs('hist', { his })}>
           <p>搜索历史</p>
-
-          {historyData.length > 0 ? <p className="empty">清空所有</p> : null}
+          
+          {
+            historyData.length > 0 ? (
+              <span>
+                {
+                  historyData.map(v => {
+                    return (
+                      <NavLink to={`/dist/home?geohash=${v.geohash}`} key={v.geohash} className="query-his">
+                        <p>{v.name}</p>
+                        <p>{v.address}</p>
+                      </NavLink>
+                    )
+                  })
+                }
+                <p className="empty" onClick={empty}>清空所有</p>
+              </span>
+            ) : null
+          }
         </div>
       </div>
     </div>
