@@ -11,7 +11,7 @@ export default class Routers extends Component {
           <Route path="/shop/:id" component={Shop}/>
           <Route path="/login" component={Login}/>
           <Route path="/city" component={City}/>
-          <Route path="/home" component={Basic}/>
+          <Route path="/dist" component={Basic}/>
           <Redirect to="/city"/>
         </Switch>
       </BrowserRouter>

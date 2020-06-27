@@ -29,7 +29,7 @@ function QueryCity (props) {
     setHis(true)
   }
   const jump = (metadata) => {
-    history.push('/home')
+    history.push('/dist/home')
   } 
   useEffect(() => {
     onlyCity(id)
